@@ -1,0 +1,1 @@
+free | awk '/^Swap:/ { printf("\"swap\":{\n\"total\":\"%s\",\n\"used\":\"%s\",\n\"free\":\"%s\"\n}",$2,$3,$4) }'

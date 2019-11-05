@@ -1,0 +1,1 @@
+free | awk '/^Mem:/ { printf("\"mem\":{\n\"total\":\"%s\",\n\"used\":\"%s\",\n\"free\":\"%s\"\n}",$2,$3,$4) }'

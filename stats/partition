@@ -1,0 +1,1 @@
+df -P | awk 'BEGIN { printf("\"partition\":[") } /^\// { printf("{\n\"device\":\"%s\",\n\"mount\":\"%s\",\n\"total\":\"%s\",\n\"used\":\"%s\",\n\"free\":\"%s\"\n},",$1,$6,$3+$4,$3,$4) } END { printf("\b]\n") }'

@@ -1,0 +1,1 @@
+iostat -d | awk 'BEGIN { printf("\"disk\": [") } /^[a-zA-Z0-9]/ {if(NR>3) printf("{\n\"device\":\"%s\",\n\"read-kbps\":\"%s\",\n\"write-kbps\":\"%s\"\n},",$1,$3,$4) } END { printf("\b]") }'
